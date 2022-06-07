@@ -1,0 +1,49 @@
+$red: #ff5d50;
+$green: #56c4c5;
+$black: #221e1f;
+$yellow: #ffd153;
+$gray: #747474;
+$light-gray: #f5f5f5;
+$border-gray: #dddddd;
+
+// 定義按鈕顏色
+@mixin btn-style($bg-color: #56c4c5, $text-color: #fff) {
+  background-color: $bg-color;
+  color: $text-color;
+}
+// 定義字型大小、粗細、行高
+@mixin font-family($font-size: 16px, $line-height: 20px, $font-weight: 400) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
+// 定義卡片樣式
+@mixin white-board {
+  box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+  border: none;
+  opacity: 1;
+}
+
+.mx-lg-4 {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+body {
+  color: $black;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+a,
+img {
+  display: block;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+ul li {
+  list-style: none;
+}
