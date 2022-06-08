@@ -25,6 +25,17 @@ $border-gray: #dddddd;
   opacity: 1;
 }
 
+@mixin desktop{
+  @media(min-width: 1024px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width: 767px){
+    @content;
+  }
+}
+
 .mx-lg-4 {
   margin-left: 16px;
   margin-right: 16px;
@@ -46,4 +57,9 @@ p {
 
 ul li {
   list-style: none;
+}
+
+.container{
+  width: 1085px;
+  margin: 0 auto;
 }

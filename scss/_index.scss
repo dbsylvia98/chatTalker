@@ -4,10 +4,22 @@
   max-width: 850px;
   max-height: 768px;
   z-index: -1;
+  @include desktop{
+    display: block;
+  }
+  @include mobile{
+    display: none;
+  }
 }
 .homeBannerDoll {
-  max-width: 532px;
-  max-height: 534px;
+  max-width: 480px;
+  height: 600px;
+  @include desktop{
+    display: block;
+  }
+  @include mobile{
+    display: none;
+  }
 }
 
 header {
@@ -64,11 +76,80 @@ h1:hover {
     @include font-family($font-size: 20px, $line-height: 29px);
   }
 }
-.homeBall {
-  width: 360px;
-  height: 360px;
-  margin-left: -250px;
+
+.darkGreenBall {
+  margin-left: -200px;
 }
+.recommendedUsers {
+  position: relative;
+  h3 {
+    @include font-family(
+      $font-size: 32px,
+      $line-height: 46px,
+      $font-weight: 500
+    );
+    margin-bottom: 16px;
+  }
+  p {
+    @include font-family($font-size: 20px, $line-height: 29px);
+    margin-bottom: 48px;
+  }
+  .roleList {
+    margin-bottom: 100px;
+  }
+  .roleList::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 310px;
+    z-index: -1;
+  }
+  .roleList li {
+    width: 260px;
+    margin-right: 16px;
+    .card {
+      @include white-board;
+      border: none;
+    }
+    .card-header{
+      width: 260px;
+      height: 260px;
+    }
+    .card-body {
+      padding: 16px 16px 24px 16px;
+      height: 128px;
+    }
+    .card-body h4,
+    .card-body p {
+      @include font-family($line-height: 24px);
+    }
+    .card-body h4 {
+      color: $green;
+    }
+  }
+  .roleList li:nth-child(4){
+    margin-right: 0;
+  }
+}
+
+.activist .card-header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ch01.svg");
+}
+.creator .card-header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ch02.svg");
+}
+.enterpriseBrand .card-header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ch03.svg");
+}
+.other .card-header {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ch04.svg");
+}
+
 .content {
   margin-top: -100px;
 }
@@ -106,11 +187,11 @@ h1:hover {
     color: $gray;
   }
 }
-.socialMedia li:nth-child(2) {
-  margin: 0 126px;
-}
 
 .skillCardList {
+  @include desktop{
+    width: 507px;
+  }
   .card {
     @include white-board;
     width: 230px;
@@ -139,9 +220,6 @@ h1:hover {
   p {
     @include font-family($line-height: 24px);
   }
-}
-.skillCardList li:nth-child(2n + 1) {
-  margin-right: 36px;
 }
 
 .skillCardInfo {
