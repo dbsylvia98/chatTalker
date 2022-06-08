@@ -10651,6 +10651,10 @@ fieldset:disabled .btn {
   margin-right: 16px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #221e1f;
   font-family: "Noto Sans TC", sans-serif;
@@ -10670,11 +10674,22 @@ ul li {
 }
 
 .container {
-  width: 1085px;
   margin: 0 auto;
 }
 
-.bgYellow {
+@media (min-width: 1024px) {
+  .container {
+    width: 1085px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.bgYellowLg {
   position: absolute;
   right: 0;
   max-width: 850px;
@@ -10683,31 +10698,54 @@ ul li {
 }
 
 @media (min-width: 1024px) {
-  .bgYellow {
+  .bgYellowLg {
     display: block;
   }
 }
 
 @media (max-width: 767px) {
-  .bgYellow {
+  .bgYellowLg {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bgYellowSm {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bgYellowSm {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .bgYellowSm {
+    display: block;
+    margin: 0 auto;
+    margin-top: -250px;
+    z-index: -1;
+    max-width: 100%;
   }
 }
 
 .homeBannerDoll {
-  max-width: 480px;
-  height: 600px;
+  z-index: 1;
 }
 
 @media (min-width: 1024px) {
   .homeBannerDoll {
-    display: block;
+    max-width: 480px;
+    height: 600px;
   }
 }
 
 @media (max-width: 767px) {
   .homeBannerDoll {
-    display: none;
+    max-width: 305px;
+    height: 305px;
   }
 }
 
@@ -10741,8 +10779,17 @@ h1:hover, .h1:hover {
   font-weight: 400;
 }
 
+@media (max-width: 375px) {
+  .btn {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 8px 24px;
+  }
+}
+
 .btn:hover {
-  color: #ffffff;
+  color: #fff;
   opacity: 0.9;
 }
 
@@ -10750,29 +10797,192 @@ h1:hover, .h1:hover {
   background-color: #ff5d50;
 }
 
+@media (max-width: 767px) {
+  .banner .textBlock {
+    margin-bottom: 32px;
+  }
+}
+
 .banner .textInfo {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 500;
-  color: #56c4c5;
   margin-bottom: 8px;
 }
 
+@media (min-width: 1024px) {
+  .banner .textInfo {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #56c4c5;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner .textInfo {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #56c4c5;
+    width: fit-content;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .textInfo {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #56c4c5;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
 .banner .textTitle {
-  font-size: 48px;
-  line-height: 70px;
-  font-weight: 500;
   margin-bottom: 16px;
 }
 
-.banner .textIntro {
-  font-size: 20px;
-  line-height: 29px;
-  font-weight: 400;
+@media (min-width: 1024px) {
+  .banner .textTitle {
+    font-size: 48px;
+    line-height: 70px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .textTitle {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1024px) {
+  .banner .textIntro {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner .textIntro {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+}
+
+.topLabel {
+  position: fixed;
+  z-index: 100;
+}
+
+@media (min-width: 1024px) {
+  .topLabel {
+    right: 48px;
+    bottom: 23px;
+  }
+}
+
+@media (max-width: 767px) {
+  .topLabel {
+    right: 14px;
+    bottom: 16px;
+  }
 }
 
 .darkGreenBall {
   margin-left: -200px;
+}
+
+@media (max-width: 767px) {
+  .darkGreenBall {
+    width: 126px;
+    height: 126px;
+    margin-left: -70px;
+    margin-top: 100px;
+  }
+}
+
+.content {
+  margin-top: -100px;
+}
+
+@media (max-width: 767px) {
+  .content {
+    margin-top: -150px;
+  }
+}
+
+.socialMedia {
+  margin-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  .socialMedia {
+    margin-bottom: 60px;
+  }
+}
+
+.socialMedia ul li {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .socialMedia ul li {
+    margin-bottom: 24px;
+  }
+}
+
+.socialMedia h3, .socialMedia .h3 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 500;
+  margin-bottom: 48px;
+}
+
+.socialMedia img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 767px) {
+  .socialMedia img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .socialMedia h4, .socialMedia .h4 {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .socialMedia h4, .socialMedia .h4 {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.socialMedia p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #747474;
 }
 
 .recommendedUsers {
@@ -10780,39 +10990,111 @@ h1:hover, .h1:hover {
 }
 
 .recommendedUsers h3, .recommendedUsers .h3 {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 500;
   margin-bottom: 16px;
 }
 
-.recommendedUsers p {
-  font-size: 20px;
-  line-height: 29px;
-  font-weight: 400;
-  margin-bottom: 48px;
+@media (min-width: 1024px) {
+  .recommendedUsers h3, .recommendedUsers .h3 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 500;
+  }
 }
 
-.recommendedUsers .roleList {
-  margin-bottom: 100px;
+@media (max-width: 767px) {
+  .recommendedUsers h3, .recommendedUsers .h3 {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recommendedUsers p {
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 400;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .recommendedUsers p {
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendedUsers p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .recommendedUsers .roleList {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendedUsers .roleList {
+    margin-bottom: 60px;
+  }
 }
 
 .recommendedUsers .roleList::after {
   content: "";
   position: absolute;
-  right: 0;
-  bottom: 0;
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 310px;
-  height: 310px;
   z-index: -1;
 }
 
+@media (min-width: 1024px) {
+  .recommendedUsers .roleList::after {
+    width: 310px;
+    height: 310px;
+    right: -150px;
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendedUsers .roleList::after {
+    width: 135px;
+    height: 135px;
+    right: 10px;
+    bottom: -10px;
+  }
+}
+
 .recommendedUsers .roleList li {
-  width: 260px;
-  margin-right: 16px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 1024px) {
+  .recommendedUsers .roleList li {
+    width: 253px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .recommendedUsers .roleList li {
+    width: 260px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendedUsers .roleList li {
+    width: 260px;
+    margin-right: 0;
+  }
 }
 
 .recommendedUsers .roleList li .card {
@@ -10826,6 +11108,8 @@ h1:hover, .h1:hover {
 .recommendedUsers .roleList li .card-header {
   width: 260px;
   height: 260px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .recommendedUsers .roleList li .card-body {
@@ -10844,8 +11128,10 @@ h1:hover, .h1:hover {
   color: #56c4c5;
 }
 
-.recommendedUsers .roleList li:nth-child(4) {
-  margin-right: 0;
+@media (min-width: 1024px) {
+  .recommendedUsers .roleList li:nth-child(4) {
+    margin-right: 0;
+  }
 }
 
 .activist .card-header {
@@ -10862,48 +11148,6 @@ h1:hover, .h1:hover {
 
 .other .card-header {
   background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ch04.svg");
-}
-
-.content {
-  margin-top: -100px;
-}
-
-.socialMedia {
-  margin-bottom: 100px;
-}
-
-.socialMedia ul li {
-  width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.socialMedia h3, .socialMedia .h3 {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 500;
-  margin-bottom: 48px;
-}
-
-.socialMedia img {
-  width: 90px;
-  height: 90px;
-  margin-bottom: 24px;
-}
-
-.socialMedia h4, .socialMedia .h4 {
-  font-size: 24px;
-  line-height: 35px;
-  font-weight: 500;
-  margin-bottom: 24px;
-}
-
-.socialMedia p {
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #747474;
 }
 
 @media (min-width: 1024px) {
@@ -10938,6 +11182,18 @@ h1:hover, .h1:hover {
   height: 50px;
 }
 
+@media (max-width: 1024px) {
+  .skillCardList .card:nth-child(2n + 1) {
+    margin-right: 47px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skillCardList .card:nth-child(2n + 1) {
+    margin-right: 0;
+  }
+}
+
 .skillCardList h4, .skillCardList .h4 {
   font-size: 18px;
   line-height: 26px;
@@ -10951,22 +11207,89 @@ h1:hover, .h1:hover {
   font-weight: 400;
 }
 
-.skillCardInfo h2, .skillCardInfo .h2 {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 500;
+.skillCardInfo h3, .skillCardInfo .h3 {
   margin-bottom: 16px;
 }
 
-.skillCardInfo p {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-  margin-bottom: 24px;
+@media (min-width: 1024px) {
+  .skillCardInfo h3, .skillCardInfo .h3 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 767px) {
+  .skillCardInfo h3, .skillCardInfo .h3 {
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skillCardInfo p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skillCardInfo p {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skillCardInfo p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .skillCardInfo {
+    text-align: center;
+  }
+  .skillCardInfo a {
+    margin-bottom: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .skillCardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .skillCardInfo a {
+    margin-bottom: 32px;
+  }
 }
 
 .userReviews {
   overflow-x: hidden;
+}
+
+.userReviews .lightYellowBall {
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+@media (max-width: 767px) {
+  .userReviews .lightYellowBall {
+    margin-left: -60px;
+    padding-top: 0;
+  }
+}
+
+.userReviews .container {
+  margin-top: -200px;
 }
 
 .userReviews .card {
@@ -10975,6 +11298,18 @@ h1:hover, .h1:hover {
   border: none;
   opacity: 1;
   padding: 48px 32px 24px 32px;
+}
+
+@media (min-width: 1024px) {
+  .userReviews .card {
+    width: 343px;
+  }
+}
+
+@media (max-width: 767px) {
+  .userReviews .card {
+    width: 100%;
+  }
 }
 
 .userReviews .userAvatar {
@@ -11034,28 +11369,107 @@ h1:hover, .h1:hover {
   background: #ffd153;
 }
 
+@media (max-width: 1024px) {
+  .swiper-slide:nth-child(2),
+  .swiper-slide:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-slide:nth-child(2),
+  .swiper-slide:nth-child(3) {
+    display: none;
+  }
+}
+
 footer .footerImage {
-  background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  height: 503px;
 }
 
-footer .footerInfo h3, footer .footerInfo .h3 {
-  font-size: 32px;
-  line-height: 46px;
-  font-weight: 500;
-  margin-bottom: 48px;
+@media (min-width: 1024px) {
+  footer .footerImage {
+    height: 503px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
+  }
 }
 
-footer .footerInfo a {
-  margin-bottom: 80px;
+@media (max-width: 1024px) {
+  footer .footerImage {
+    height: 300px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footerImage {
+    height: 600px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg");
+    margin-top: -70px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footerInfo h3, footer .footerInfo .h3 {
+    font-size: 32px;
+    line-height: 46px;
+    font-weight: 500;
+    margin-bottom: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .footerInfo h3, footer .footerInfo .h3 {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footerInfo h3, footer .footerInfo .h3 {
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  footer .footerInfo a {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  footer .footerInfo a {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  footer .footerInfo a {
+    margin-bottom: 60px;
+  }
 }
 
 footer p {
   background-color: #f5f5f5;
   padding: 16px 0;
+}
+
+.priceTableBanner {
+  background-color: #F7F9FD;
+  border-radius: 0px 0px 0px 300px;
+  margin-bottom: 100px;
+  height: 400px;
+}
+
+.priceTableBanner .priceTableBannerImg {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner.svg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  height: 560px;
 }
 /*# sourceMappingURL=style.css.map */

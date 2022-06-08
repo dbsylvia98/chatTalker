@@ -1,0 +1,13 @@
+.priceTableBanner{
+    background-color: $bg-gray;
+    border-radius: 0px 0px 0px 300px;
+    margin-bottom: 100px;
+    height: 400px;
+    .priceTableBannerImg{
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/banner.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: top;
+        height: 560px;
+    }
+}
