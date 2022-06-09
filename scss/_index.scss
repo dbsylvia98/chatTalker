@@ -39,45 +39,6 @@
   }
 }
 
-header {
-  padding: 24px 0;
-}
-
-h1 {
-  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 101%;
-  width: 220px;
-  height: 40px;
-}
-
-h1:hover {
-  opacity: 0.7;
-}
-
-.btn {
-  border-radius: 22px;
-  padding: 8px 32px;
-  @include btn-style;
-  @include font-family($font-size: 18px, $line-height: 26px);
-  @include mobileSm {
-    @include font-family($font-size: 14px, $line-height: 20px);
-    padding: 8px 24px;
-  }
-}
-.btn:hover {
-  color: $white;
-  opacity: 0.9;
-}
-
-.priceTableBtn {
-  background-color: $red;
-}
-
 .banner {
   .textBlock {
     @include mobile {
@@ -176,10 +137,15 @@ h1:hover {
 }
 
 .socialMedia {
-  margin-bottom: 100px;
+  @include desktop {
+    width: 984px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
   @include mobile {
     margin-bottom: 60px;
   }
+  margin-bottom: 100px;
   ul li {
     width: 240px;
     display: flex;
@@ -249,7 +215,7 @@ h1:hover {
     }
     margin-bottom: 16px;
   }
-  p {
+  .textBlock p {
     @include desktop {
       @include font-family($font-size: 20px, $line-height: 29px);
       margin-bottom: 48px;
@@ -270,26 +236,6 @@ h1:hover {
       margin-bottom: 60px;
     }
   }
-  .roleList::after {
-    @include desktop {
-      width: 310px;
-      height: 310px;
-      right: -150px;
-      bottom: -100px;
-    }
-    @include mobile {
-      width: 135px;
-      height: 135px;
-      right: 10px;
-      bottom: -10px;
-    }
-    content: "";
-    position: absolute;
-    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: -1;
-  }
   .roleList li {
     @include desktop {
       width: 253px;
@@ -306,6 +252,7 @@ h1:hover {
     margin-bottom: 24px;
     .card {
       @include white-board;
+      width: 260px;
       border: none;
     }
     .card-header {
@@ -315,8 +262,8 @@ h1:hover {
       border-top-right-radius: 12px;
     }
     .card-body {
-      padding: 16px 16px 24px 16px;
       height: 128px;
+      padding: 16px 16px 24px 16px;
     }
     .card-body h4,
     .card-body p {
@@ -330,6 +277,30 @@ h1:hover {
     .roleList li:nth-child(4) {
       margin-right: 0;
     }
+  }
+}
+.recommendedUsers::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  @include desktop {
+    width: 260px;
+    height: 310px;
+    bottom: -180px;
+  }
+  @include pad {
+    width: 210px;
+    height: 310px;
+    bottom: -100px;
+  }
+  @include mobile {
+    width: 120px;
+    height: 135px;
+    bottom: -10px;
   }
 }
 
@@ -441,7 +412,7 @@ h1:hover {
   .lightYellowBall {
     margin-left: 100px;
     padding-top: 100px;
-    @include mobile{
+    @include mobile {
       margin-left: -60px;
       padding-top: 0;
     }
@@ -451,13 +422,15 @@ h1:hover {
   }
   .card {
     @include white-board;
-    @include desktop {
-      width: 343px;
+    @include desktop{
+      padding: 48px 32px 24px 32px;
     }
-    @include mobile {
-      width: 100%;
+    @include pad{
+      padding: 48px 32px 24px 32px;
     }
-    padding: 48px 32px 24px 32px;
+    @include mobile{
+      padding: 48px 16px 16px 16px;
+    }
   }
   .userAvatar {
     border-radius: 50%;
@@ -503,18 +476,13 @@ h1:hover {
 }
 .swiper-pagination-bullet {
   background-color: $gray;
+  width: 10px;
+  height: 10px;
 }
 .swiper-pagination-bullet-active {
   background: $yellow;
-}
-.swiper-slide:nth-child(2),
-.swiper-slide:nth-child(3) {
-  @include pad {
-    display: none;
-  }
-  @include mobile {
-    display: none;
-  }
+  width: 16px;
+  border-radius: 20px;
 }
 
 footer {
@@ -525,14 +493,14 @@ footer {
     width: 100%;
     @include desktop {
       height: 503px;
-      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg');
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/home_footer.svg");
     }
     @include pad {
       height: 300px;
     }
     @include mobile {
       height: 600px;
-      background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg');
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/footer_sm.svg");
       margin-top: -70px;
     }
   }

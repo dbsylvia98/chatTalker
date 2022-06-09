@@ -76,10 +76,49 @@ ul li {
 
 .container{
   @include desktop{
-    width: 1085px;
+    width: 1088px;
   }
   @include pad{
     width: 100%;
   }
   margin: 0 auto;
+}
+
+header {
+  padding: 24px 0;
+}
+
+h1 {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 101%;
+  width: 220px;
+  height: 40px;
+}
+
+h1:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  border-radius: 22px;
+  padding: 8px 32px;
+  @include btn-style;
+  @include font-family($font-size: 18px, $line-height: 26px);
+  @include mobileSm {
+    @include font-family($font-size: 14px, $line-height: 20px);
+    padding: 8px 24px;
+  }
+}
+.btn:hover {
+  color: $white;
+  opacity: 0.9;
+}
+
+.priceTableBtn {
+  background-color: $red;
 }

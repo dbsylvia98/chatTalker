@@ -10679,7 +10679,7 @@ ul li {
 
 @media (min-width: 1024px) {
   .container {
-    width: 1085px;
+    width: 1088px;
   }
 }
 
@@ -10687,6 +10687,54 @@ ul li {
   .container {
     width: 100%;
   }
+}
+
+header {
+  padding: 24px 0;
+}
+
+h1, .h1 {
+  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 101%;
+  width: 220px;
+  height: 40px;
+}
+
+h1:hover, .h1:hover {
+  opacity: 0.7;
+}
+
+.btn {
+  border-radius: 22px;
+  padding: 8px 32px;
+  background-color: #56c4c5;
+  color: #fff;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+@media (max-width: 375px) {
+  .btn {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 8px 24px;
+  }
+}
+
+.btn:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.priceTableBtn {
+  background-color: #ff5d50;
 }
 
 .bgYellowLg {
@@ -10747,54 +10795,6 @@ ul li {
     max-width: 305px;
     height: 305px;
   }
-}
-
-header {
-  padding: 24px 0;
-}
-
-h1, .h1 {
-  background-image: url("https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/logo.png?raw=true");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  overflow: hidden;
-  white-space: nowrap;
-  text-indent: 101%;
-  width: 220px;
-  height: 40px;
-}
-
-h1:hover, .h1:hover {
-  opacity: 0.7;
-}
-
-.btn {
-  border-radius: 22px;
-  padding: 8px 32px;
-  background-color: #56c4c5;
-  color: #fff;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 400;
-}
-
-@media (max-width: 375px) {
-  .btn {
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 400;
-    padding: 8px 24px;
-  }
-}
-
-.btn:hover {
-  color: #fff;
-  opacity: 0.9;
-}
-
-.priceTableBtn {
-  background-color: #ff5d50;
 }
 
 @media (max-width: 767px) {
@@ -10921,6 +10921,14 @@ h1:hover, .h1:hover {
   margin-bottom: 100px;
 }
 
+@media (min-width: 1024px) {
+  .socialMedia {
+    width: 984px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+  }
+}
+
 @media (max-width: 767px) {
   .socialMedia {
     margin-bottom: 60px;
@@ -11010,7 +11018,7 @@ h1:hover, .h1:hover {
 }
 
 @media (min-width: 1024px) {
-  .recommendedUsers p {
+  .recommendedUsers .textBlock p {
     font-size: 20px;
     line-height: 29px;
     font-weight: 400;
@@ -11019,13 +11027,13 @@ h1:hover, .h1:hover {
 }
 
 @media (max-width: 1024px) {
-  .recommendedUsers p {
+  .recommendedUsers .textBlock p {
     margin-bottom: 48px;
   }
 }
 
 @media (max-width: 767px) {
-  .recommendedUsers p {
+  .recommendedUsers .textBlock p {
     font-size: 18px;
     line-height: 26px;
     font-weight: 400;
@@ -11042,33 +11050,6 @@ h1:hover, .h1:hover {
 @media (max-width: 767px) {
   .recommendedUsers .roleList {
     margin-bottom: 60px;
-  }
-}
-
-.recommendedUsers .roleList::after {
-  content: "";
-  position: absolute;
-  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-}
-
-@media (min-width: 1024px) {
-  .recommendedUsers .roleList::after {
-    width: 310px;
-    height: 310px;
-    right: -150px;
-    bottom: -100px;
-  }
-}
-
-@media (max-width: 767px) {
-  .recommendedUsers .roleList::after {
-    width: 135px;
-    height: 135px;
-    right: 10px;
-    bottom: -10px;
   }
 }
 
@@ -11102,6 +11083,7 @@ h1:hover, .h1:hover {
   border-radius: 12px;
   border: none;
   opacity: 1;
+  width: 260px;
   border: none;
 }
 
@@ -11113,8 +11095,8 @@ h1:hover, .h1:hover {
 }
 
 .recommendedUsers .roleList li .card-body {
-  padding: 16px 16px 24px 16px;
   height: 128px;
+  padding: 16px 16px 24px 16px;
 }
 
 .recommendedUsers .roleList li .card-body h4, .recommendedUsers .roleList li .card-body .h4,
@@ -11131,6 +11113,40 @@ h1:hover, .h1:hover {
 @media (min-width: 1024px) {
   .recommendedUsers .roleList li:nth-child(4) {
     margin-right: 0;
+  }
+}
+
+.recommendedUsers::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball02.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+@media (min-width: 1024px) {
+  .recommendedUsers::after {
+    width: 260px;
+    height: 310px;
+    bottom: -180px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .recommendedUsers::after {
+    width: 210px;
+    height: 310px;
+    bottom: -100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendedUsers::after {
+    width: 120px;
+    height: 135px;
+    bottom: -10px;
   }
 }
 
@@ -11297,18 +11313,23 @@ h1:hover, .h1:hover {
   border-radius: 12px;
   border: none;
   opacity: 1;
-  padding: 48px 32px 24px 32px;
 }
 
 @media (min-width: 1024px) {
   .userReviews .card {
-    width: 343px;
+    padding: 48px 32px 24px 32px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .userReviews .card {
+    padding: 48px 32px 24px 32px;
   }
 }
 
 @media (max-width: 767px) {
   .userReviews .card {
-    width: 100%;
+    padding: 48px 16px 16px 16px;
   }
 }
 
@@ -11363,24 +11384,14 @@ h1:hover, .h1:hover {
 
 .swiper-pagination-bullet {
   background-color: #747474;
+  width: 10px;
+  height: 10px;
 }
 
 .swiper-pagination-bullet-active {
   background: #ffd153;
-}
-
-@media (max-width: 1024px) {
-  .swiper-slide:nth-child(2),
-  .swiper-slide:nth-child(3) {
-    display: none;
-  }
-}
-
-@media (max-width: 767px) {
-  .swiper-slide:nth-child(2),
-  .swiper-slide:nth-child(3) {
-    display: none;
-  }
+  width: 16px;
+  border-radius: 20px;
 }
 
 footer .footerImage {

@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatTalker 最全面的聊天機器人</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="img/logo.ico" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- swiper -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/hover.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +22,7 @@
             <h1 class="mb-0">
                 <a href="./index.html">chatTalker</a>
             </h1>
-            <a href="#" class="btn priceTableBtn">方案費用</a>
+            <a href="#" class="btn priceTableBtn hvr-pulse-grow">方案費用</a>
         </header>
         <div class="banner d-flex flex-column flex-lg-row justify-content-between align-items-center">
             <div class="textBlock d-flex flex-column">
@@ -37,7 +39,7 @@
         <div class="d-flex flex-column align-items-between">
             <div class="socialMedia text-center">
                 <h3>三大平台，我來搞定</h3>
-                <ul class="d-flex flex-column flex-md-row align-items-center justify-content-center ps-0 mb-0">
+                <ul class="d-flex flex-column flex-md-row align-items-center justify-content-lg-between ps-0 mb-0">
                 <li>
                     <img src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/messenger.svg" alt="messengerIcon">
                     <h4>Facebook Messenger</h4>
@@ -57,49 +59,51 @@
             </div>
         </div>
     </div>
-    <div class="recommendedUsers container">
-        <div class="d-flex flex-column align-items-center text-center">
-            <h3>任何的角色，我都能給</h3>
-            <p>量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策</p>
+    <div class="recommendedUsers">
+        <div class="container">
+            <div class="textBlock d-flex flex-column align-items-center text-center">
+                <h3>任何的角色，我都能給</h3>
+                <p>量身打造您想要的專屬服務，幫助您迅速判斷成效、並加快決策</p>
+            </div>
+            <ul class="roleList d-flex flex-column flex-md-row justify-content-md-center justify-content-xl-between flex-wrap align-items-center text-center ps-0">
+                <li class="activist">
+                    <div class="card d-flex flex-column align-items-center">
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <h4>活動主</h4>
+                            <p>用戶數位足跡掌握在手<br>精準取得客戶輪廓，提供分析</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="creator">
+                    <div class="card d-flex flex-column align-items-center">
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <h4>創作者</h4>
+                            <p>自由設計互動腳本<br>輕鬆整合各項數據</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="enterpriseBrand">
+                    <div class="card d-flex flex-column align-items-center">
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <h4>企業品牌</h4>
+                            <p>多元資料整合，做出服務差異化<br>幫助企業加速決策</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="other">
+                    <div class="card d-flex flex-column align-items-center">
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <h4>其他</h4>
+                            <p>創造更多可能...<br></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="roleList d-flex flex-column flex-md-row justify-content-md-center justify-content-lg-between flex-wrap align-items-center text-center ps-0">
-            <li class="activist">
-                <div class="card d-flex flex-column align-items-center">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h4>活動主</h4>
-                        <p>用戶數位足跡掌握在手<br>精準取得客戶輪廓，提供分析</p>
-                    </div>
-                </div>
-            </li>
-            <li class="creator">
-                <div class="card d-flex flex-column align-items-center">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h4>創作者</h4>
-                        <p>自由設計互動腳本<br>輕鬆整合各項數據</p>
-                    </div>
-                </div>
-            </li>
-            <li class="enterpriseBrand">
-                <div class="card d-flex flex-column align-items-center">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h4>企業品牌</h4>
-                        <p>多元資料整合，做出服務差異化<br>幫助企業加速決策</p>
-                    </div>
-                </div>
-            </li>
-            <li class="other">
-                <div class="card d-flex flex-column align-items-center">
-                    <div class="card-header"></div>
-                    <div class="card-body">
-                        <h4>其他</h4>
-                        <p>創造更多可能...<br></p>
-                    </div>
-                </div>
-            </li>
-        </ul>
     </div>
     <div class="container">
         <div class="d-flex flex-column flex-column-reverse flex-lg-row justify-content-between align-items-center">
@@ -136,16 +140,16 @@
             <div class="skillCardInfo">
                 <h3>快速了解客戶輪廓<br>建立品牌流量池</h3>
                 <p>深入用戶日常，成為用戶貼身好友<br>精準傳遞品牌資訊，打造個人化專屬服務<br>不知不覺深入用戶生活，成為用戶貼心的好朋朋:D</p>
-                <a href="#" class="btn">方案費用</a>
+                <a href="#" class="btn hvr-pulse-grow">方案費用</a>
             </div>
         </div>
     </div>
     <div class="userReviews">
         <img class="lightYellowBall" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/f70f00178a7f0baa31e9c01634303d8562cfe93a/chatTalker_images/ball03.svg" alt="lightYellowBall">
-        <div class="container">
+        <div class="container overflow-hidden">
             <h3 class="text-center">好評如潮</h3>
             <div class="swiper-container">
-                <div class="swiper-wrapper d-flex flex-column flex-md-row justify-content-between">
+                <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="card">
                             <img class="userAvatar" src="https://github.com/hexschool/webLayoutTraining1st/blob/master/chatTalker_images/user01.jpg?raw=true" alt="userAvatar01">
@@ -207,13 +211,13 @@
     <div class="footerImage d-flex flex-column justify-content-end">
         <div class="footerInfo d-flex flex-column justify-content-center align-items-center">
         <h3>\ 美好用戶體驗，從對話開始 /</h3>
-        <a href="#" class="btn">方案費用</a>
+        <a href="#" class="btn hvr-pulse-grow">方案費用</a>
         </div>
     </div>
     <p class="text-center">© 2022 chatTalker. All Rights Reserved.</p>
     </footer>
     <a href="#top">
-        <img class="topLabel" src="https://raw.githubusercontent.com/dbsylvia98/chatTalker/20bef367607cfdfd1d3ce8f98097e1ebab7a7313/img/top.svg" alt="topLabel">
+        <img class="topLabel hvr-bob" src="https://raw.githubusercontent.com/dbsylvia98/chatTalker/20bef367607cfdfd1d3ce8f98097e1ebab7a7313/img/top.svg" alt="topLabel">
     </a>
     <!-- swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
